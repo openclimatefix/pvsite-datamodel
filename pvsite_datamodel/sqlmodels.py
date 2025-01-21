@@ -30,6 +30,7 @@ class MLModelSQL(Base, CreatedMixin):
     model_uuid = sa.Column(UUID, primary_key=True, server_default=sa.func.gen_random_uuid())
     name = sa.Column(sa.String)
     version = sa.Column(sa.String)
+    description = sa.Column(sa.String)
 
     # Add description with default message
     description = sa.Column(sa.String, nullable=True, server_default="No description provided.")
